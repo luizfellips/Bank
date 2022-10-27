@@ -1,0 +1,54 @@
+﻿<Window x:Class="Bank.MainSystem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bank"
+        mc:Ignorable="d"
+        Title="MainSystem" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="95*"/>
+        </Grid.RowDefinitions>
+        <Label FontSize="48" Height="74" Width="304" Grid.ColumnSpan="2" Margin="236,0,0,0" FontWeight="Bold" Content="Bank System" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="1" Margin="30,0,30,0">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEFEFEF" Offset="1"/>
+                    <GradientStop Color="#FFF9F9F9" Offset="0.203"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label FontSize="24" FontWeight="Bold">Name of the owner</Label>
+            <Label FontSize="36" Background="#3EFF6363" Margin="10,0,35,0" HorizontalContentAlignment="Center" FontWeight="Bold" x:Name="NameBox" Height="57"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="30,0,30,0">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEFEFEF" Offset="1"/>
+                    <GradientStop Color="#FFF9F9F9" Offset="0.203"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label FontSize="24" FontWeight="Bold">Balance</Label>
+            <Label FontSize="36" Background="#3E93FF63" Margin="10,0,35,0" HorizontalContentAlignment="Center" FontWeight="Bold" x:Name="BalanceBox" Height="57"></Label>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="2">
+            <Label FontSize="36">Methods</Label>
+            <TabPanel>
+                <Label FontSize="20">Amount</Label>
+                <TextBox Width="86" x:Name="WithdrawAmount" FontSize="24"></TextBox>
+                <Button FontSize="22" Width="180" Margin="0,0,-25,0" Click="Withdraw_ButtonClick">Withdraw Money</Button>
+            </TabPanel>
+            <TabPanel Margin="0,12,0,0">
+                <Label FontSize="20">Amount</Label>
+                <TextBox Width="86" FontSize="24" x:Name="DepositAmount"></TextBox>
+                <Button FontSize="22" Width="180" Margin="0,0,-25,0" Click="Deposit_ButtonClick">Deposit Money</Button>
+            </TabPanel>
+        </StackPanel>
+    </Grid>
+</Window>
